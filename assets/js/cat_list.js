@@ -33,6 +33,16 @@ request.onsuccess = (event) => {
     .catch((error) => {
       console.error('Gagal memuat data:', error);
     });
+
+  // Mengambil data dari IndexedDB
+  getCatsFromIndexedDB()
+    .then((cats) => {
+      // Gunakan data kucing dari IndexedDB
+      console.log(cats);
+    })
+    .catch((error) => {
+      console.error('Gagal mendapatkan data kucing dari IndexedDB:', error);
+    });
 };
 
 // Mengambil data dari IndexedDB
@@ -51,13 +61,3 @@ function getCatsFromIndexedDB() {
     };
   });
 }
-
-// Menggunakan data dari IndexedDB
-getCatsFromIndexedDB()
-  .then((cats) => {
-    // Gunakan data kucing dari IndexedDB
-    console.log(cats);
-  })
-  .catch((error) => {
-    console.error('Gagal mendapatkan data kucing dari IndexedDB:', error);
-  });

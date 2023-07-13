@@ -5,8 +5,8 @@ const request = indexedDB.open('catDB', 1);
 
 // Membuat schema IndexedDB
 request.onupgradeneeded = (event) => {
-  const db = event.target.result;
-  
+  db = event.target.result;
+
   // Membuat objek store
   const store = db.createObjectStore('cats', { keyPath: 'id' });
   store.createIndex('nameIndex', 'name');
@@ -25,7 +25,7 @@ request.onsuccess = (event) => {
     .then((data) => {
       const transaction = db.transaction('cats', 'readwrite');
       const store = transaction.objectStore('cats');
-      
+
       data.forEach((cat) => {
         store.put(cat);
       });
@@ -41,11 +41,11 @@ function getCatsFromIndexedDB() {
     const transaction = db.transaction('cats', 'readonly');
     const store = transaction.objectStore('cats');
     const request = store.getAll();
-    
+
     request.onsuccess = (event) => {
       resolve(event.target.result);
     };
-    
+
     request.onerror = (event) => {
       reject(event.target.error);
     };

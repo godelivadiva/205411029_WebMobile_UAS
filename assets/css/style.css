@@ -1,0 +1,318 @@
+/* Import font from googleapis */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&family=Space+Mono&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Tillana:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap');
+
+/* set the root by define the font name */
+:root{
+    --space-mono-font: 'Space Mono', monospace;
+    --border-dark-subtle: #373838; 
+    --font-tillana:'Tillana', cursive;
+    --font-castoro-titling:'Castoro Titling', cursive;
+}
+*{
+    box-sizing: border-box;
+}
+body *{
+    font-family: var(--space-mono-font);
+}
+.font-tillana{
+    font-family: var(--font-tillana);
+}
+/**
+Styling page 
+*/
+body,
+html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #F9F9F9;
+}
+
+#content-wrapper>section:not(:nth-child(1)){
+padding-top: 2em;
+padding-bottom: 2em;
+}
+#content-wrapper>section:nth-child(odd){
+    background-color: #67778b;
+}
+#content-wrapper>section:nth-child(odd) *{
+    color: #000;
+}
+
+.vaccine-body h2{
+    margin-top: 10px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+
+/* CSS styling for topNavBar */
+#topNavigation{
+    background-color: #67778b;
+    z-index: 1023;
+}
+#topNavigation *{
+    color:#fff;
+    font-family: var(--font-castoro-titling);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Slider Section */
+#carouselExample {
+    position: relative;
+    height: 80vh;
+}
+#carouselExample>.carousel-inner,
+#carouselExample>.carousel-inner>.carousel-item{
+    height: 100%;
+}
+
+#carouselExample>.carousel-inner>.carousel-item img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    filter: brightness(0.7);
+}
+#carouselExample>.carousel-inner>.carousel-item .carousel-caption{
+    bottom: unset;
+    top: 0;
+    height: calc(100%);
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#carouselExample>.carousel-inner>.carousel-item .carousel-caption *{
+    text-shadow: 0px 0px 3px #373838;
+}
+
+/* Testimonies */
+div#testimonies {
+    position: relative;
+    width: 500px;
+    margin: auto;
+}
+div#testimonies .testimonies-inner{
+    height: 132px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+div#testimonies .testimonies-inner .testimony-item{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+div#testimonies .testimonies-inner .testimony-item.active{
+    display: block;
+}
+
+#testimonies .testimony-msg{
+    padding-top: 15px;
+    font-family: var(--font-tillana);
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+}
+#testimonies .testimony-quote,
+#testimonies .testimony-assignatory,
+#testimonies .testimony-assignatory-sub{
+    text-align: center;
+    font-weight: 400;
+    font-family: var(--font-tillana);
+}
+#testimonies .testimony-assignatory-sub{
+    font-size: .8rem;
+}
+#testimonies .testimony-quote .material-symbols-outlined{
+    font-size: 1.8rem;
+    color: #c7c7c7;
+}
+#testimonies .testimony-item-prev,
+#testimonies .testimony-item-next{
+    position: absolute;
+    top: 0;
+    height: calc(100%);
+    width: 50px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#testimonies .testimony-item-prev{
+    left: -50px;
+}
+#testimonies .testimony-item-next{
+    right: -50px;
+}
+#testimonies .testimony-item-prev .testimony-item-prev-btn,
+#testimonies .testimony-item-next .testimony-item-next-btn{
+    width: 35px;
+    height: 35px;
+    padding: unset;
+    border: 5px solid #36363624;
+    border-right: unset;
+    border-bottom: unset;
+    background-color: transparent;
+}
+#testimonies .testimony-item-prev .testimony-item-prev-btn{
+    rotate: -45deg;
+}
+#testimonies .testimony-item-next .testimony-item-next-btn{
+    rotate: 135deg;
+}
+div#testimonies .testimonies-inner .testimony-item.slide-start.slide-next{
+    display: block;
+    animation:slideToLeft .3s ease-in-out forwards;
+}
+@keyframes slideToLeft {
+    0%{
+        transform: translateX(0%)
+    }
+    50%, 100%{
+        transform: translateX(-100%)
+    }
+    
+}
+div#testimonies .testimonies-inner .testimony-item.slide-end.slide-next{
+    display: block;
+    animation:slideFromRight .3s ease-in-out forwards;
+}
+@keyframes slideFromRight {
+    0%{
+        transform: translateX(100%)
+    }
+    50%, 100%{
+        transform: translateX(0%)
+    }
+}
+div#testimonies .testimonies-inner .testimony-item.slide-start.slide-prev{
+    display: block;
+    animation:slideToRight .3s ease-in-out forwards;
+}
+@keyframes slideToRight {
+    0%{
+        transform: translateX(0%)
+    }
+    50%, 100%{
+        transform: translateX(100%)
+    }
+    
+}
+div#testimonies .testimonies-inner .testimony-item.slide-end.slide-prev{
+    display: block;
+    animation:slideFromLeft .3s ease-in-out forwards;
+}
+@keyframes slideFromLeft {
+    0%{
+        transform: translateX(-100%)
+    }
+    50%, 100%{
+        transform: translateX(0%)
+    }
+}
+
+/* Set height to 100% for body and html to enable the background image to cover the whole page: */
+body, html {
+    height: 100%
+  }
+  
+  .bgimg {
+    /* Background image */
+    background-color: #074f57;
+    background-image: url('../images/under-construction.jpg');
+    /* Full-screen */
+    height: 100%;
+    /* Center the background image */
+    background-position: center;
+    /* Scale and zoom in the image */
+    background-size: cover;
+    /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+    position: relative;
+    /* Add a white text color to all elements inside the .bgimg container */
+    color: white;
+    /* Add a font */
+    font-family: "Courier New", Courier, monospace;
+    /* Set the font-size to 25 pixels */
+    font-size: 25px;
+  }
+    
+  /* Position text in the middle */
+  .middle {
+    padding: 200px;
+    text-align: center;
+  }
+  
+  /* Style the <hr> element */
+  hr {
+    margin: auto;
+    width: 40%;
+  }
+
+  /* media query for screen between 300px - 768px */
+  @media only screen and (min-width: 300px) and (max-width: 768px) {
+    /* set width for image in carousel and about-me */
+    img {
+        width: 300px;
+    }
+    .me-img {
+        width: 200px !important;
+    }
+      
+     /* change the font size */
+    .source {
+        font-size: 8pt;
+    }
+    h1 {
+        font-size: 18pt;
+    }
+    h2 {
+        font-size: 15pt;
+    }
+    h3 {
+        font-size: 13pt;
+    }
+    .vaccine-text p {
+        font-size: 10pt;
+    }
+    footer {
+        font-size: 9pt;
+    }
+
+    /* reduce div size content to fit the mobile size */
+    div#testimonies {
+        position: relative;
+        width: 250px;
+        margin: auto;
+    }
+
+    /* reduce font size */
+    #testimonies .testimony-msg {
+        font-family: var(--font-tillana);
+        font-weight: 600;
+        font-size: 11pt;
+        text-align: center;
+    }
+      
+    /* change the size of button left and right in testimonies */
+    #testimonies .testimony-item-prev .testimony-item-prev-btn, #testimonies .testimony-item-next .testimony-item-next-btn {
+        width: 15px;
+        height: 15px;
+    }
+
+    /* change the size of quote */
+    #testimonies .testimony-quote .material-symbols-outlined {
+        font-size: 1.5rem;
+        color: #c7c7c7;
+    }
+}

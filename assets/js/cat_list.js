@@ -1,3 +1,5 @@
+let db;
+
 // Membuka koneksi IndexedDB
 const request = indexedDB.open('catDB', 1);
 
@@ -5,7 +7,7 @@ const request = indexedDB.open('catDB', 1);
 request.onupgradeneeded = (event) => {
   const db = event.target.result;
   
-  // Membuat objek toko
+  // Membuat objek store
   const store = db.createObjectStore('cats', { keyPath: 'id' });
   store.createIndex('nameIndex', 'name');
 };
@@ -15,7 +17,7 @@ request.onerror = (event) => {
 };
 
 request.onsuccess = (event) => {
-  const db = event.target.result;
+  db = event.target.result;
 
   // Menyimpan data dari API ke IndexedDB
   fetch('https://63afb929649c73f572c113ad.mockapi.io/api/v1/cat_adoption_list')

@@ -29,7 +29,82 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-  <h1>Selamat datang di Halaman Index!</h1>
+  <!-- Navigasi -->
+    <nav class="nav navbar navbar-expand-lg position-fixed top-0 w-100" id="topNavigation">
+        <div class="container-md">
+            <a class="navbar-brand" href="./">Pet Care</a>
+            <!-- untuk membuat sebuah tombol toggle pada navbar web yang menggunakan framework Bootstrap. -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <!-- connect to the home section -->
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- connect to the adopt section -->
+                        <a class="nav-link active" href="#adopt">Let's Adopt</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- connect to the vaccinations section -->
+                        <a class="nav-link active" href="#vaccinations">Vaccinations</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sections -->
+    <section id="home">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="true" data-bs-interval="3000">
+            <!-- membuat carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <!-- set image untuk caraousel pertama -->
+                    <img src="assets/images/pet-background.jpg" class="d-block w-100" alt="Background Image">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="font-tillana fw-bold">Pet Care</h1>
+                        <p>Lembaga non-profit untuk meningkatkan kesejahteraan kucing dan anjing jalanan</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <!-- set image untuk caraousel kedua -->
+                    <img src="assets/images/adopt-dont-shop.jpg" class="d-block w-100" alt="Background Image">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="font-tillana fw-bold">Biarkan Mereka Bermain</h1>
+                        <p>Memberikan tempat sementara untuk mereka yang masih menunggu adopsi</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <!-- set image untuk caraousel ketiga -->
+                    <img src="assets/images/love-and-adore.jpg" class="d-block w-100" alt="Background Image">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="font-tillana fw-bold">Adopsi Jangan Beli</h1>
+                        <p>Dengan memilih adopsi, otomatis ada dua nyawa yang terselamatkan. Nyawa hewan yang kita pilih untuk diadopsi dan nyawa hewan lain yang kemudian memiliki kesempatan untuk ditolong juga</p>
+                    </div>
+                </div>
+            </div>
+            <!-- membuat button previous untuk menggeser caraousel ke selanjutnya -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <!-- membuat button next untuk menggeser caraousel ke selanjutnya -->
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    
+    <section id="adopt">
+        <script src="assets/js/cat_list.js"></script>
+    </section>
+    
+    <section id="vaccinations">
+    </section>
   
   <!-- footer -->
   <footer class="footer bg-light py-3">

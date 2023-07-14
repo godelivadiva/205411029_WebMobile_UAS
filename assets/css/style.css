@@ -259,6 +259,17 @@ body, html {
     width: 40%;
   }
 
+  /* section styling */
+  .section_style {
+    margin-top: 50px;
+  }
+
+  .section-divider {
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    }
+
   /* media query for screen between 300px - 768px */
   @media only screen and (min-width: 300px) and (max-width: 768px) {
     /* set width for image in carousel and about-me */

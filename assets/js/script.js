@@ -1,3 +1,21 @@
+// Top Button function
+window.onscroll = function() {
+  showTopButton();
+};
+
+function showTopButton() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById('topButton').style.display = 'block';
+  } else {
+    document.getElementById('topButton').style.display = 'none';
+  }
+}
+
+function scrollToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
 // Resize navbar container
 const resizeNavParent = () => {
     var _navbar = document.getElementById('topNavigation')

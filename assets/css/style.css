@@ -259,16 +259,38 @@ body, html {
     width: 40%;
   }
 
-  /* section styling */
-  .section_style {
-    margin-top: 50px;
-  }
-
-  .section-divider {
-    border-top: 1px solid #999999;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    /* section styling */
+    .section_style {
+        margin-top: 50px;
     }
+
+    .section-divider {
+        border-top: 1px solid #999999;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* top button */
+    #topButton {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        font-size: 20px;
+        border: none;
+        outline: none;
+        background-color: #555;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 50%;
+    }
+
+    #topButton:hover {
+        background-color: #333;
+    }
+
 
   /* media query for screen between 300px - 768px */
   @media only screen and (min-width: 300px) and (max-width: 768px) {

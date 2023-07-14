@@ -19,16 +19,6 @@ function showCats(cats) {
   });
 }
 
-// Menggunakan data dari IndexedDB
-getCatsFromIndexedDB()
-  .then((cats) => {
-    // Gunakan data kucing dari IndexedDB
-    showCats(cats);
-  })
-  .catch((error) => {
-    console.error('Gagal mendapatkan data kucing dari IndexedDB:', error);
-  });
-
 // Mengambil data dari REST API
 fetch('https://63afb929649c73f572c113ad.mockapi.io/api/v1/cat_adoption_list')
   .then((response) => response.json())

@@ -166,10 +166,10 @@ div#testimonies .testimonies-inner .testimony-item.active{
     background-color: transparent;
 }
 #testimonies .testimony-item-prev .testimony-item-prev-btn{
-    rotate: -45deg;
+    transform: rotate(-45deg);
 }
 #testimonies .testimony-item-next .testimony-item-next-btn{
-    rotate: 135deg;
+    transform: rotate(135deg);
 }
 div#testimonies .testimonies-inner .testimony-item.slide-start.slide-next{
     display: block;
@@ -265,7 +265,7 @@ body, html {
   }
 
   .section-divider {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #999999;
     margin-top: 20px;
     margin-bottom: 20px;
     }

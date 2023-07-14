@@ -1,16 +1,21 @@
 function showCats(cats) {
   const adoptSection = document.getElementById('adopt');
-  let html = '';
   cats.forEach((cat) => {
-    html += `
-      <div class="cat-card">
-        <img src="${cat.image_url}" alt="${cat.name}">
-        <h3>${cat.name}</h3>
-        <p>${cat.description}</p>
-      </div>
-    `;
+    const catCard = `
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <img src="${cat.image_url}" class="card-img-top" alt="${cat.name}">
+                <div class="card-body">
+                  <h5 class="card-title">${cat.name}</h5>
+                  <p class="card-text">${cat.description}</p>
+                  <p class="card-text">Gender: ${cat.gender}</p>
+                  <p class="card-text">Age: ${cat.age} years old</p>
+                </div>
+              </div>
+            </div>
+          `;
+    adoptSection.innerHTML += catCard;
   });
-  adoptSection.innerHTML = html;
 }
 
 // Mengambil data dari REST API

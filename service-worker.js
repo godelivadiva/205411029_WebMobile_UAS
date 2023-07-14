@@ -4,9 +4,9 @@ const CACHE_NAME = 'pet-care-cache-v1';
 // Daftar file yang akan di-cache
 const urlsToCache = [
   '/',
-  'index.html',
-  'assets/css/style.css',
-  'assets/js/script.js',
+  '/index.html',
+  '/assets/css/style.css',
+  '/assets/js/script.js',
 ];
 
 // Install Service Worker dan caching file

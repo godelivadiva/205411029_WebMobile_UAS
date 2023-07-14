@@ -3,10 +3,10 @@ const CACHE_NAME = 'pet-care-cache-v1';
 
 // Daftar file yang akan di-cache
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/assets/css/style.css',
-  '/assets/js/script.js',
+  'https://godelivadiva.github.io/205411029_WebMobile_UAS/',
+  'https://godelivadiva.github.io/205411029_WebMobile_UAS/index.html',
+  'https://godelivadiva.github.io/205411029_WebMobile_UAS/assets/css/style.css',
+  'https://godelivadiva.github.io/205411029_WebMobile_UAS/assets/js/script.js',
 ];
 
 // Install Service Worker dan caching file

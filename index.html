@@ -16,7 +16,7 @@
     <!-- crossorigin untuk menandakan bahwa server Google Fonts dapat diakses melalui sumber yang berbeda dengan dokumen asli -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- digunakan untuk menghubungkan ke file CSS eksternal -->
+    <!-- digunakan untuk menghubungkan ke file CSS eksternal (font awesome, google font, dan boostrap) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
@@ -29,9 +29,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+    <!-- button yang muncul di halaman web untuk mengarahkan kembali ke halaman atas -->
     <button onclick="scrollToTop()" id="topButton" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
-    <!-- Navigasi -->
+    <!-- display navbar pada halaman index dimana ketika klik submenu akan diarahkan ke section -->
     <nav class="nav navbar navbar-expand-lg position-fixed top-0 w-100" id="topNavigation">
         <div class="container-md">
             <a class="navbar-brand" href="./">Pet Care</a>
@@ -58,7 +59,8 @@
         </div>
     </nav>
 
-    <!-- Sections -->
+    <!-- menampilkan isi dari index dalam bentuk sections -->
+    <!-- halaman pembuka yang berisi carousel -->
     <section id="home">
         <div id="carouselExample" class="carousel slide" data-bs-ride="true" data-bs-interval="3000">
             <!-- membuat carousel -->
@@ -103,6 +105,7 @@
     
     <hr class="section-divider">
     
+    <!-- menampilkan testimoni dari quotes dimana berbentuk seperti carousel -->
     <section id="testimonials" class="section-style">
         <h1 class="text-center font-tillana">Pawrents Testimonials</h1>
         <hr class="mx-auto opacity-100" style="width:50px;height: 3;">
@@ -138,8 +141,10 @@
         </div>
     </section>
     
+    <!-- pembatas garis untuk antar section -->
     <hr class="section-divider">
     
+    <!-- menampilkan list dari pet yang bisa di adopsi, dimana datanya diambil dari API -->
     <section id="adopt" class="section-style">
         <div class="container">
             <h2 class="section-title text-center">Let's Adopt</h2>
@@ -149,6 +154,7 @@
     
     <hr class="section-divider">
 
+    <!-- menampilkan bagian vaksinasi -->
     <section id="vaccinations" class="section-style">
         <div class="container">
             <h1 class="section-title text-center">Vaksinasi Kucing</h1>
@@ -247,13 +253,15 @@
   <script src="assets/js/include-htmls.js"></script>
   <script src="assets/js/script.js"></script>
   <script src="assets/js/cat_list.js"></script>
+  <!-- . menandakan bahwa script tersebut adalah modul js  -->
   <script type="module">
-    if ('serviceWorker' in navigator) {
+      if ('serviceWorker' in navigator) {
+        // mendaftarkan Service Worker pada aplikasi web.
         navigator.serviceWorker.register('service-worker.js')
-        .then((registration) => {
+        .then((registration) => { // registrasion: objek yang berisi informasi dari service worker
             console.log('Service Worker berhasil didaftarkan:', registration.scope);
         })
-        .catch((error) => {
+        .catch((error) => { // jika error
             console.error('Gagal mendaftarkan Service Worker:', error);
         });
     }

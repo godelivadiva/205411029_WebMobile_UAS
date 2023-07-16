@@ -19,9 +19,7 @@ body *{
 .font-tillana{
     font-family: var(--font-tillana);
 }
-/**
-Styling page 
-*/
+/* Styling page */
 body,
 html{
     height: 100%;
@@ -259,39 +257,39 @@ body, html {
     width: 40%;
   }
 
-    /* section styling */
-    .section_style {
-        margin-top: 50px;
-    }
+/* Section styling */
+.section_style {
+    margin-top: 50px;
+}
 
-    .section-divider {
-        border-top: 1px solid #999999;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+.section-divider {
+    border-top: 1px solid #999999;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
-    /* top button */
-    #topButton {
-        display: none;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 99;
-        font-size: 20px;
-        border: none;
-        outline: none;
-        background-color: #a2835d;
-        color: white;
-        cursor: pointer;
-        padding: 10px;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-    }
+/* top button */
+#topButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: #a2835d;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
 
-    #topButton:hover {
-        background-color: #766044;
-    }
+#topButton:hover {
+    background-color: #766044;
+}
 
 
   /* media query for screen between 300px - 768px */

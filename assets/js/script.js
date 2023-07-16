@@ -1,8 +1,11 @@
 // Top Button function
+// mamanggil showTopButton() ketika ada aktifitas scroll di window
 window.onscroll = function() {
   showTopButton();
 };
 
+// fungsi untuk menentukan kapan topButton muncul dan menghilang
+// dengan mendapatkan posisi scroll halaman pada browser
 function showTopButton() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById('topButton').style.display = 'block';
@@ -11,6 +14,7 @@ function showTopButton() {
   }
 }
 
+// fungsi ketika tomboll topButton di klik yaitu mengembalikan posisi ke atas
 function scrollToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
